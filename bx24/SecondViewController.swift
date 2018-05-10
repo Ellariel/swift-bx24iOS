@@ -55,7 +55,8 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
         
         var info = infos[indexPath.row]
         
-        info.images = ["https://png.icons8.com/ios/1600/accuracy.png"]
+        info.images = ["https://png.icons8.com/ios/1600/accuracy.png",
+                       "https://pp.userapi.com/c834203/v834203757/11d0b0/74C4VbdqYSQ.jpg"]
         
         infoViewController.info = info
         

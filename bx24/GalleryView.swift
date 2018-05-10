@@ -13,7 +13,7 @@ class GalleryView: UIView {
     var urls: [URL?] = []
     
     public func loadUrls(urls links: [String]) {
-        urls = links.map { URL(string: $0) } //.filter { ($0 != nil) }
+        urls = links.map { URL(string: $0) }
         
         reloadImages()
     }
@@ -31,7 +31,7 @@ class GalleryView: UIView {
             imageView.contentMode = .scaleAspectFit
             
             //let placeholderImage = UIImage(named: "placeholder", url: url)!
-            //imageView.af_setImage(withURL: url, placeholderImage: placeholderImage)
+            imageView.af_setImage(withURL: url)
             
         
             scrollView.addSubview(imageView)
@@ -53,9 +53,6 @@ extension GalleryView: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let x = scrollView.contentOffset.x / scrollView.frame.size.width
         let index = Int(floor(x - 0.5)) + 1
-//        let offset = (scrollView.contentOffset.x - CGFloat(index) * scrollView.frame.size.width) / scrollView.frame.size.width
-//
-//        print("o: \(offset)")
         
         pageControll.currentPage = index
     }

@@ -1,0 +1,6 @@
+framework module Pods_bx24 {
+  umbrella header "Pods-bx24-umbrella.h"
+
+  export *
+  module * { export * }
+}
