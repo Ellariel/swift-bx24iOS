@@ -3,6 +3,7 @@
 //  bx24
 
 import UIKit
+import Alamofire
 
 class FirstViewController: UIViewController {
     
@@ -65,7 +66,8 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         
         //let info = infos[indexPath.row]
         
-        //secondViewController.infos = infos
+        //secondViewController.infos = []
+
         
         secondViewController.id = indexPath.row
             
